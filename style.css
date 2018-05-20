@@ -1,7 +1,7 @@
 body
 {
 	text-align:center;
-	background-color:#222;
+	background: radial-gradient(80% 40%, #222, #335);
 	font-family:Verdana;
 	color:white;
 	margin:0px;
@@ -12,21 +12,36 @@ body
 	display: inline-block;
 	width:80%;
 	background-color:#444;
-	min-width:1000px;
+	min-width:500px;
 	height:70%;
 	border-left: 2px solid #111;
 	border-right: 2px solid #111;
+	padding-top:15px;
+	padding-bottom:15px;
 }
 
 .headerBlock,.footerBlock
 {
 	height:15%;
-	min-width:1000px;
-	width:80%;	
+	min-width:500px;
+	width:80%;
 	display: inline-block;
 	background-color:#449;
 	border-left: 2px solid #111;
 	border-right: 2px solid #111;
+}
+
+.footerBlock
+{
+	clear:both;
+}
+
+iframe
+{
+	min-width:420px;
+	width:60%;
+	height:340px;
+	min-height:320px;
 }
 
 .project
@@ -35,7 +50,13 @@ body
 	background-color:#333;
 	border: 2px solid #111;
 	display: inline-block;
-	width:1200px;
+	width:70%;	
+	min-width:450px;
+
+}
+.project .desc
+{
+	text-align:left;
 }
 
 
@@ -71,7 +92,7 @@ img
 
 a
 {
-	font-family:Verdana;
+	font-family:Arial;
 	font-size: 75px;
 	color: #33aacc;
 	text-shadow: 0 0 5px black,2px 2px 2px black;
