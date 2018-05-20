@@ -1,10 +1,13 @@
 body
 {
 	text-align:center;
-	background: radial-gradient(80% 40%, #222, #335);
+	background: linear-gradient(#113, #131);
 	font-family:Verdana;
 	color:white;
 	margin:0px;
+	color:#eff;
+	border: 2px solid #111;
+	text-shadow:2px 1px 1px black;
 }
 
 .mainBlock
@@ -13,7 +16,7 @@ body
 	width:80%;
 	background-color:#444;
 	min-width:500px;
-	height:70%;
+	min-height:70%;
 	border-left: 2px solid #111;
 	border-right: 2px solid #111;
 	padding-top:15px;
@@ -26,7 +29,7 @@ body
 	min-width:500px;
 	width:80%;
 	display: inline-block;
-	background-color:#449;
+	background-color:#268;
 	border-left: 2px solid #111;
 	border-right: 2px solid #111;
 }
@@ -102,6 +105,7 @@ a
 
 h4
 {
+	color:yellow;
 	text-align:left;
 }
 
