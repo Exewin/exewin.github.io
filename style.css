@@ -12,11 +12,9 @@ body
 
 .mainBlock
 {
-	display: inline-block;
 	width:80%;
-	background-color:#444;
 	min-width:500px;
-	min-height:70%;
+	background-color:#444;
 	border-left: 2px solid #111;
 	border-right: 2px solid #111;
 	padding-top:15px;
@@ -57,11 +55,34 @@ iframe
 	min-width:450px;
 
 }
-.project .desc
+
+.skill
+{
+	text-align:center;
+	padding:20px;
+	background-color:#333;
+	border: 2px solid #111;
+	display: inline-block;
+	width:70%;	
+	min-width:450px;
+}
+
+
+.desc
 {
 	text-align:left;
 }
 
+.skill img:hover
+{
+	padding: 10px;
+}
+
+.skill img
+{
+	-webkit-transition-duration: 0.2s; /* Safari */
+	transition-duration: 0.2s;
+}
 
 
 .button 
@@ -78,7 +99,9 @@ iframe
 	border-radius: 6px;
 	-webkit-transition-duration: 0.2s; /* Safari */
 	transition-duration: 0.2s;
+	margin-top:5px;
 }
+
 
 .button:hover 
 {
@@ -86,8 +109,11 @@ iframe
 	color:#eeff44;
 }
 
+
+
 img
 {
+	background-color:#fff;
 	border-radius: 6px;
 	border: 2px solid #111111;
 }
