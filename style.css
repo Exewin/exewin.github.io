@@ -50,20 +50,27 @@ p strong{
 .coolYellow{background-color:#ec4; color:#782;}
 .coolRed{background-color:#d55; color:#600;}
 
-.paddingMe
+.paddingMe, .expand
 {
-	border-top:1px solid black;
-	border-bottom:1px solid black;
+	//border:1px solid black;
 	height:125px;
+	margin:5px;
+	padding:15px;
+	border-radius:20px;
+	
+	-webkit-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.54);
+	-moz-box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.54);
+	box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.54);
+}
+
+.expand{
+	background-color:#eee;
 }
 
 .wordwrap{
 	word-spacing:-0.25em;
 }
 
-@media (min-width: 768px) {
-.expand{display:none;}
-}
 
 @media (max-width: 900px) {
 .colp{
@@ -110,12 +117,7 @@ p strong{
 /*BOOTSTRAP EDITED*/
 
 
-.col-sm-6[class~="expand"]{
-	border-top:1px solid black;
-	border-bottom:1px solid black;
-	height:125px;
-	background-color:#eee;
-}
+
 
 .col-sm-6 p{
 	font-size:18px;
