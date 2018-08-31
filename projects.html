@@ -1,209 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
 <head>
-<title>EXEWIN</title>
-<meta charset="UTF-8"/>
-<link rel="Stylesheet" href="style.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<title>exewin</title>
+	<meta charset="UTF-8"/>
+	<link rel="Stylesheet" href="style.css"/>
+	<link rel="shortcut icon" href="headimg.png" type="image/png">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<!-- bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/bootstrap.js"></script>
+	<script src="js/console.js"></script>
+	<script>
+	var curDir = "projects";
+	var cds = ['space_game','card_game','cubejong','rts','rpg2d','tetris','breakout','hg'];
+	var cdPaths = ['projects/space-game/space-game','projects/card-game/card-game','projects/cubejong/cubejong','projects/rts/rts','projects/rpg2d/rpg2d','projects/tetris/tetris','projects/breakout/breakout','projects/hg/hg'];
+	</script>
+
 </head>
+
 <body>
-<div class="headerBlock"> 
-<br/>
-<a href="index.html">EXEWIN</a>
-<br/>
-<br/>
-</div>
-<center>
-<div class="mainBlock">
-<h2>My projects</h2>
 
-<br/>
-
-<!--proj-->
-<div class="project" id="sg">
-<h3>#space-game</h3>
-<iframe width="648" height="432"
-src="https://www.youtube.com/embed/z4xsY81lXfI">
-</iframe>
-
-<br/>
-<br/>
-<br/>
-
-<h4>TITLE: Mission One</h4>
-<h4>YEAR: 2017, 2018</h4>
-<h4>SOFTWARE: Unity(C#), Gimp, Audacity, Notepad++</h4>
-<div class="desc">
-	Project started in September 2017 and finished in May 2018.  <br/>
-My second big project brought to an end.  <br/>
-I focused mainly on programming and graphics therefore story in game is simplified.  <br/>
-You play as a Admiral of the spaceship and your mission is to destroy all enemy ships.  <br/>
-You gain experience and new technologies through the gameplay.  <br/>
-While you have to destroy hostiles, you must also watch out for their fire and deadly meteors.  <br/>
-<br/>
-<a href="https://github.com/exewin/space-game" class="button">GitHub <i class="fab fa-github"></i></a>
-<a href="https://github.com/exewin/space-game/releases" class="button">Download <i class="fas fa-download"></i></a>
-</div>
-<br/>
-<br/>
-
-</div>
-<!--end proj-->
-
-<hr/>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
 	
-<!--proj-->
-<div class="project" id="cg">
-<h3>#card-game</h3>
-<iframe
-src="https://www.youtube.com/embed/QVLMBRRP3nA">
-</iframe>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <span class="navbar-brand">
+	  <button type="button" class="btn-clear" title="click ~ to toogle" onclick="showElement('console')"><script>document.write(label.toUpperCase());</script>:\><script>document.write(curDir);</script></button>
+	  </span>
+	  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+		<li><a href="other/other.html">Other</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<br/>
-<br/>
-<br/>
+  <div class="container-fluid" id="console" style="display:none">
+  		<script>
+		document.write(label.toUpperCase()+":\u005C>"+curDir);
+		</script>
+		<input type="text" id="command" placeholder="type something..." onkeypress="checkKey()"></input>
+		<div id="output" style="display:block">
+		<script>
+		document.getElementById('output').innerHTML = "quick hint: click ~ on keyboard to toggle console";
+		</script>
+		</div>
+  </div>
 
-<h4>TITLE: Tournament of Magicians</h4>
-<h4>YEAR: 2016, 2017</h4>
-<h4>SOFTWARE: Unity(C#), Gimp, Audacity, Notepad++</h4>
-<div class="desc">
-	Huge and ambitious project started in October 2016 and finished a year later. Major improvement over my previous projects. <br/>
-My first game written completely in C# instead of UnityScript. Some of the graphics were created by me (including all the portraits) and I did the whole programming. <br/>
--Fully working game - 40 different cards and 9 characters.<br/>
--Working demo saving and loading system - possibility of watching match again.<br/>
--GUI Scalling which allows to play in 4:3 (like 1024x768) or in 16:9 (ex.1920x1080) with some additional visible cards.<br/>
--Project had also working multiplayer, but to be honest it had many bugs.<br/>
-Funfact: Most of the game (excluding menu) runs on single C# script which contains almost 3000 lines of code. <br/>
-<br/>
-<a href="https://github.com/exewin/card-game" class="button">GitHub <i class="fab fa-github"></i></a>
-<a href="https://github.com/exewin/card-game/releases" class="button">Download <i class="fas fa-download"></i></a>
-</div> 
-<br/>
-<br/>
-
+<div class="jumbotron" id="jumbotron">
+  <div class="container text-center">
+	<a href="index.html"><script>document.getElementById("jumbotron").style.backgroundColor = "#"+color;</script>exewin.github.io</a>
+	<p>Portfolio website of exewin</p>
+  </div>
 </div>
-<!--end proj-->
 
-<hr/>
+<div class="container-fluid bg-3 text-center">    
+  <h3>My Projects</h3><br/>
+  <h4>Unity3D projects</h4><br/>
+  
+  
+  <div class="row">
+  
+  <div class="col-sm-2"></div>
+  
+	<a href="projects/card-game/card-game.html">
+    <div class="col-sm-4 unityc">
+      <strong>Tournament of Magicians</strong>
+      <div class="blackBg"><img src="projectimg/card-game.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	
+	<a href="projects/space-game/space-game.html">
+    <div class="col-sm-4 unityc"> 
+      <strong>Mission One</strong>
+      <div class="blackBg"><img src="projectimg/space-game.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	
+	<div class="col-sm-2 unityc"><h1>Unity3D C#</h1></div>
+	
+  </div>
+  
+  
+  <div class="row">
+  
+  <div class="col-sm-2 "></div>
+  
+	<a href="projects/cubejong/cubejong.html">
+    <div class="col-sm-4 unityc">
+      <strong>Cubejong</strong>
+      <div class="blackBg"><img src="projectimg/cubejong.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	
+	
+	<a href="projects/rts/rts.html">
+    <div class="col-sm-4 unityjs"> 
+      <strong>Untitled RTS game</strong>
+      <div class="blackBg"><img src="projectimg/rts.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	
+	<div class="col-sm-2 unityjs"><h1>Unity3D JS</h1></div>
+	
+  </div>
+  
+    <div class="row">
+  
+  <div class="col-sm-2 "></div>
+	
+	<a href="projects/rpg2d/rpg2d.html">
+    <div class="col-sm-4 unityjs"> 
+      <strong>Untitled RPG2D game</strong>
+      <div class="blackBg"><img src="projectimg/rpg.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	
+	<a href="projects/breakout/breakout.html">
+    <div class="col-sm-4 js"> 
+      <strong>Breakout clone</strong>
+      <div class="blackBg"><img src="projectimg/breakout.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	
+	<div class="col-sm-2 js"><h1>JS/HTML5</h1></div>
+	
+  </div>
+  
+  <div class="row">
+  
+    <div class="col-sm-2 "></div>
 
-<!--proj-->
-<div class="project" id="strategy">
-<h3>#rts-game</h3>
-<iframe width="648" height="432"
-src="https://www.youtube.com/embed/2aI8MFX9jVo">
-</iframe>
-
-<br/>
-<br/>
-<br/>
-
-<h4>TITLE: unnamed</h4>
-<h4>YEAR: 2016</h4>
-<h4>SOFTWARE: Unity(JS), Gimp, Blender, Notepad++</h4>
-<div class="desc">
-	Project created in March 2016 (abandoned in September). Tribute to old-school RTS games like Warcraft 2. <br/>
-Milestone for my programming skill - nicely working and optimized pathfinding.  <br/>
-Abandoned due to many major bugs and lack of skill(mainly in graphics). It was probably too ambitious back then. <br/>
+	<a href="projects/tetris/tetris.html">
+    <div class="col-sm-4 js"> 
+      <strong>Tetris clone</strong>
+      <div class="blackBg"><img src="projectimg/tetris.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	
+	<a href="projects/hg/hg.html">
+    <div class="col-sm-4 php"> 
+      <strong>Hardware garage</strong>
+      <div class="blackBg"><img src="projectimg/hg.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	
+	<div class="col-sm-2 php"><h1>PHP</h1></div>
+	
+  </div>
+  
 </div>
-<br/>
-<br/>
 
-</div>
-<!--end proj-->
-
-<hr/>
-
-<!--proj-->
-<div class="project" id="rpg">
-<h3>#rpg2d-game</h3>
-<iframe width="648" height="432"
-src="https://www.youtube.com/embed/oSLi0aMQzXo">
-</iframe>
-
-<br/>
-<br/>
-<br/>
-
-<h4>TITLE: unnamed</h4>
-<h4>YEAR: 2015, 2016</h4>
-<h4>SOFTWARE: Unity(JS), Gimp, Audacity, Notepad++</h4>
-<div class="desc">
-	Project started on 9th September 2015 and continued to February. My first try with RPG games.  <br/>
-I wanted to get something similar to games you can make in RPGMaker.  <br/>
-Fight screen in this game was based on Disciples franchise by Strategy First. <br/>
-Whole project was made mainly for fun rather than something more serious. At least I've improved my skills a bit. <br/>
-I made scripts for movement, fighting, picking and equiping stuff.  <br/>
-Graphics were also mine (well I shouldn't be proud of them, should I?). <br/>
-</div>
-<br/>
-<br/>
-
-</div>
-<!--end proj-->
-
-<hr/>
-
-<!--proj-->
-<div class="project" id="tetris">
-<h3>#JavaScript-Tetris</h3>
-
-<img src="tetris/tetris.png"></img>
-
-<br/>
-<br/>
-<br/>
-
-<h4>TITLE: JavaScript-Tetris</h4>
-<h4>YEAR: 2018</h4>
-<h4>SOFTWARE: JavaScript, Notepad++</h4>
-<div class="desc">
-		Quick project, clone of Tetris. You can try it in your browser. <br/>
-<a href="https://github.com/exewin/JavaScript-Tetris" class="button">GitHub <i class="fab fa-github"></i></a>
-<a href="https://exewin.github.io/tetris/tetris.html" class="button">Play <i class="fas fa-gamepad"></i></a>
-</div>
-<br/>
-<br/>
-
-</div>
-<!--end proj-->
-
-<hr/>
-
-<!--proj-->
-<div class="project" id="breakout">
-<h3>#JavaScript-Breakout</h3>
-
-<img src="breakout/break.png"></img>
-
-<br/>
-<br/>
-<br/>
-
-<h4>TITLE: JavaScript-Breakout</h4>
-<h4>YEAR: 2018</h4>
-<h4>SOFTWARE: JavaScript, Notepad++</h4>
-<div class="desc">
-		Quick project, clone of Breakout. You can try it in your browser. <br/>
-<a href="https://github.com/exewin/JavaScript-Breakout" class="button">GitHub <i class="fab fa-github"></i></a>
-<a href="https://exewin.github.io/breakout/breakout.html" class="button">Play <i class="fas fa-gamepad"></i></a>
-</div>
-<br/>
-<br/>
-
-</div>
-<!--end proj-->
-
-
-
-<br/>
-<br/>
-<a href="index.html" class="button">Main Menu</a>
-<br/>
-<br/>
-</div>
-<div class="footerBlock"> 
-<br/>
-Copyright © <script type="text/javascript">
+<footer class="container-fluid text-center">
+<p>Copyright © <script type="text/javascript">
 var d = new Date()
 if(d.getFullYear()!=2017)
 {
@@ -211,10 +177,8 @@ if(d.getFullYear()!=2017)
 }
 document.write(d.getFullYear())
 </script>
-Exewin ALL RIGHTS RESERVED
-<br/>
-<br/>
-</center>
+exewin ALL RIGHTS RESERVED</p>
+</footer>
 
 </body>
 </html>

@@ -1,45 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
 <head>
-<title>EXEWIN</title>
-<meta charset="UTF-8"/>
-<link rel="Stylesheet" href="style.css">
+
+	<title>exewin</title>
+	<meta charset="UTF-8"/>
+	<link rel="Stylesheet" href="/style.css"/>
+	<link rel="shortcut icon" href="headimg.png" type="image/png">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<!-- bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/console.js"></script>
+	<script>
+	var curDir = "";
+	var cds = ['projects','skills','contact','other'];
+	var cdPaths = ['projects','skills','contact','other/other'];
+	</script>
+
 </head>
+
 <body>
-<div class="headerBlock"> 
-<br/>
-<a href="index.html">EXEWIN</a>
-<br/>
-<br/>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <span class="navbar-brand">
+	  <button type="button" class="btn-clear" title="click ~ to toogle" onclick="showElement('console')"><script>document.write(label.toUpperCase());</script>:\><script>document.write(curDir);</script></button>
+	  </span>
+	  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="other/other.html">Other</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container-fluid" id="console" style="display:none">
+  		<script>
+		document.write(label.toUpperCase()+":\u005C>"+curDir);
+		</script>
+		<input type="text" id="command" placeholder="type something..." onkeypress="checkKey()"></input>
+		<div id="output" style="display:block">
+		</div>
+  </div>
+
+<div class="jumbotron" id="jumbotron">
+  <div class="container text-center">
+	<a href="index.html"><script>document.getElementById("jumbotron").style.backgroundColor = "#"+color;</script>exewin.github.io</a>
+	<p>Portfolio website of exewin</p>
+  </div>
 </div>
-<center>
-<div class="mainBlock">
 
-<h2>Main Menu</h2>
-
-
-<img src="comp.jpg" width="500px"></img>
-
-<br/>
-
-<h5>
-Welcome to my portfolio website.</br>
-I'm into programming and game designing.</br>
-Click on whichever button to see more.</br>
-
-</h5>
-
-<br/>
-
-
-<a href="projects.html" class="button">Projects</a>
-<a href="skills.html" class="button">Skills</a>
-<a href="contact.html" class="button">Contact</a>
-
+	
+<div class="jumbotron text-center" id="effectBg">
+	<p>Greetings!<br/>
+	<small>
+	I'm a programmer,<br/>
+	game developer <br/>
+	and a player<span style="color:gray;"><br/> 
+	</small>
+	</p>
 </div>
-<div class="footerBlock"> 
+
+
 <br/>
-Copyright © <script type="text/javascript">
+
+<div class="container-fluid text-center">  
+  <div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-2"></div>
+  <div class="col-sm-1"></div>
+  <div class="col-sm-2">
+	<h4>I mainly work in:</h4>
+	<img src="projectimg/unity.png" class="img-responsive"></img>
+  </div>
+  </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+
+<br/>
+
+<div class="container-fluid bg-3 text-center">    
+  <h3>Examples of my work:</h3><br/>
+  <div class="row">
+  <div class="col-sm-2"></div>
+	<a href="projects/card-game/card-game.html">
+    <div class="col-sm-4">
+      <p>Tournament of Magicians - Unity3D C#</p>
+      <div class="blackBg"><img src="projectimg/card-game.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	<a href="projects/space-game/space-game.html">
+    <div class="col-sm-4"> 
+      <p>Mission One - Unity3D C#</p>
+      <div class="blackBg"><img src="projectimg/space-game.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+    <div class="col-sm-2"></div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+  <div class="col-sm-2"></div>
+	<a href="projects/cubejong/cubejong.html">
+    <div class="col-sm-4">
+      <p>Cubejong - Unity3D C#</p>
+      <div class="blackBg"><img src="projectimg/cubejong.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	<a href="projects/breakout/breakout.html">
+    <div class="col-sm-4"> 
+      <p>Breakout clone - Javascript/HTML5</p>
+      <div class="blackBg"><img src="projectimg/breakout.png" class="img-responsive center-block" alt="Image"></div>
+    </div>
+	</a>
+	<div class="col-sm-2"></div>
+  </div>
+</div><br><br>
+
+
+
+<footer class="container-fluid text-center">
+<p>Copyright © <script type="text/javascript">
 var d = new Date()
 if(d.getFullYear()!=2017)
 {
@@ -47,10 +150,8 @@ if(d.getFullYear()!=2017)
 }
 document.write(d.getFullYear())
 </script>
-Exewin ALL RIGHTS RESERVED
-<br/>
-<br/>
-</center>
+exewin ALL RIGHTS RESERVED</p>
+</footer>
 
 </body>
 </html>

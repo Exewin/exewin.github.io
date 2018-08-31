@@ -6,7 +6,7 @@
 	<title>exewin</title>
 	<meta charset="UTF-8"/>
 	<link rel="Stylesheet" href="/style.css"/>
-	<link rel="shortcut icon" href="headimg.png" type="image/png">
+	<link rel="shortcut icon" href="/headimg.png" type="image/png">
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
@@ -16,8 +16,9 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/console.js"></script>
+	<script src="/js/imgzoom.js"></script>
 	<script>
-	var curDir = "contact";
+	var curDir = "projects\u005Chg"; <!-- edit that part -->
 	var cds = [];
 	var cdPaths = [];
 	</script>
@@ -42,11 +43,11 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li class="active"><a href="contact.html">Contact</a></li>
-        <li><a href="other/other.html">Other</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/skills.html">Skills</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+		<li><a href="/other/other.html">Other</a></li>
       </ul>
     </div>
   </div>
@@ -63,40 +64,71 @@
 
 <div class="jumbotron" id="jumbotron">
   <div class="container text-center">
-	<a href="index.html"><script>document.getElementById("jumbotron").style.backgroundColor = "#"+color;</script>exewin.github.io</a>
+	<a href="/index.html"><script>document.getElementById("jumbotron").style.backgroundColor = "#"+color;</script>exewin.github.io</a>
 	<p>Portfolio website of exewin</p>
   </div>
 </div>
 
+ 
+<!-- edit that part -->
 
-<div class="container-fluid text-center">
-	<h3>Contact</h3>
+<div class="container-fluid bg-3 ">  
 
-	<img src="comp2.jpg" title="PENTIUM III HYPE!!!" style=" width:500px; border-radius:5px; border:2px solid black;"></img>
+	  <h2>Hardware-Garage</h2><br/>
+	  
+	  
+	  
+	 <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+		  <div class="modal-content">
+			<div class="modal-body">
+			  <img src="" class="enlargeImageModalSource">
+			</div>
+		  </div>
+		</div>
+	</div>
 
-	<br/>
+	<div class="jumbotron">
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-3 text-center"><img style="width:auto; height:100%;" src="2.png"></div>
+		<div class="col-sm-3 text-center"><img style="width:auto; height:100%;" src="3.png"></div>
+		<div class="col-sm-3"></div>
+	</div>   
+	</div>
+	  
+	  
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-5">
+		
+			
+				<div class="miniFoot coolGreen">
+				<i class="fas fa-info-circle"> </i>Project is finished.
+				</div>
+				<h3>CODENAME: #hg</h3>
+				<h4>TITLE: Hardware Garage</h4>
+				<h4>YEAR: 2018</h4>
+				<h4>SOFTWARE: PHP, Notepad++</h4>
+				
+				Hardware Garage is a tool which can hold information about your computers parts. 
+				It allows you to add CPUs, graphics cards, RAM modules, motherboards, PSUs, HDDs and assembly computers with these parts. You can easily browse them and delete.
+				More details on Github.
+				
+				<br/>
+				<a class="btn btn-primary"  href="https://github.com/exewin/hardware-garage">GitHub <i class="fab fa-github"></i></a>
+			
+		</div>
+		
+		<div class="col-sm-5 text-center">
+		Video preview is not available.
+		</div>
+		<div class="col-sm-1"></div>
+	</div>  
+
 	
-	</p>Currently E-mail is the best way to contact me.<p>
-	
-	<br/>
 
-	<a class="btn btn-primary" href="mailto:windowsmemphis@gmail.com">E-mail <i class="far fa-envelope"></i></a>
-	<br/>
-	<h4>windowsmemphis@gmail.com</h4>
-	
-	<br/>
-	<br/>
-	
-	<h4>Links:</h4>
-	<a class="btn btn-primary" href="https://github.com/exewin">Github <i class="fab fa-github"></i></a>
-	<a class="btn btn-primary" href="https://www.facebook.com/PanikaKernela/">Facebook <i class="fab fa-facebook"></i></a>
-	<a class="btn btn-primary" href="https://www.youtube.com/channel/UCxOUPkdfLOik6-nhf5l4PiA">Youtube <i class="fab fa-youtube"></i></a>
-	<a class="btn btn-primary" href="https://www.kongregate.com/accounts/windowsmemphis">Kongregate</a>
-
-	<br/>
-	<br/>
 </div>
-
 
 <footer class="container-fluid text-center">
 <p>Copyright © <script type="text/javascript">

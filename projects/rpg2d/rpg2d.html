@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<title>exewin</title>
+	<meta charset="UTF-8"/>
+	<link rel="Stylesheet" href="/style.css"/>
+	<link rel="shortcut icon" href="/headimg.png" type="image/png">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<!-- bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/console.js"></script>
+	<script src="/js/imgzoom.js"></script>
+	<script>
+	var curDir = "projects\u005Crpg2d"; <!-- edit that part -->
+	var cds = [];
+	var cdPaths = [];
+	</script>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <span class="navbar-brand">
+	  <button type="button" class="btn-clear" title="click ~ to toogle" onclick="showElement('console')"><script>document.write(label.toUpperCase());</script>:\><script>document.write(curDir);</script></button>
+	  </span>
+	  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/skills.html">Skills</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+		<li><a href="/other/other.html">Other</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container-fluid" id="console" style="display:none">
+  		<script>
+		document.write(label.toUpperCase()+":\u005C>"+curDir);
+		</script>
+		<input type="text" id="command" placeholder="type something..." onkeypress="checkKey()"></input>
+		<div id="output" style="display:block">
+		</div>
+  </div>
+
+<div class="jumbotron" id="jumbotron">
+  <div class="container text-center">
+	<a href="/index.html"><script>document.getElementById("jumbotron").style.backgroundColor = "#"+color;</script>exewin.github.io</a>
+	<p>Portfolio website of exewin</p>
+  </div>
+</div>
+
+ 
+<!-- edit that part -->
+
+<div class="container-fluid bg-3 ">  
+
+	  <h2>RPG2D</h2><br/>
+	  
+	  
+	  
+	 <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+		  <div class="modal-content">
+			<div class="modal-body">
+			  <img src="" class="enlargeImageModalSource">
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="jumbotron">
+	<div class="row">
+		<div class="col-sm-3"><img style="width:100%; height:auto;" src="1.png"></div>
+		<div class="col-sm-3"><img style="width:100%; height:auto;" src="2.png"></div>
+		<div class="col-sm-3"><img style="width:100%; height:auto;" src="3.png"></div>
+		<div class="col-sm-3"><img style="width:100%; height:auto;" src="4.png"></div>
+	</div>   
+	</div>
+	  
+	  
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-5">
+		
+				<div class="miniFoot coolRed">
+				<i class="fas fa-info-circle"> </i>Project is abondoned and some files are lost.
+				</div>
+
+				<h3>CODENAME: #rpg2d</h3>
+				<h4>TITLE: unnamed</h4>
+				<h4>YEAR: 2015, 2016</h4>
+				<h4>SOFTWARE: Unity(JS), Gimp, Audacity, Notepad++</h4>
+					Project started on 9th September 2015 and continued to February. My first try with RPG games.
+				I wanted to get something similar to games you can make in RPGMaker. 
+				Fight screen in this game was based on Disciples franchise by Strategy First.
+				Whole project was made mainly for fun rather than something more serious. At least I've improved my skills a bit.
+				I made scripts for movement, fighting, picking and equiping stuff.
+				Graphics were also mine (well I shouldn't be proud of them, should I?).
+				<br/>
+			
+		</div>
+		
+		<div class="col-sm-5">
+		<iframe src='https://www.youtube.com/embed/oSLi0aMQzXo'> </iframe>
+		</div>
+		<div class="col-sm-1"></div>
+	</div>  
+
+	
+
+</div>
+
+<footer class="container-fluid text-center">
+<p>Copyright © <script type="text/javascript">
+var d = new Date()
+if(d.getFullYear()!=2017)
+{
+	document.write("2017-")
+}
+document.write(d.getFullYear())
+</script>
+exewin ALL RIGHTS RESERVED</p>
+</footer>
+
+</body>
+</html>

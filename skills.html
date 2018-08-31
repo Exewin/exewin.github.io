@@ -1,89 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
 <head>
-<title>EXEWIN</title>
-<meta charset="UTF-8"/>
-<link rel="Stylesheet" href="style.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	<title>exewin</title>
+	<meta charset="UTF-8"/>
+	<link rel="Stylesheet" href="/style.css"/>
+	<link rel="shortcut icon" href="headimg.png" type="image/png">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/glacial-indifference" type="text/css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<!-- bootstrap -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/console.js"></script>
+	<script src="/js/skillsToggle.js"></script>
+	<script>
+	var curDir = "skills";
+	var cds = [];
+	var cdPaths = [];
+	</script>
+
 </head>
+
 <body>
-<div class="headerBlock"> 
-<br/>
-<a href="index.html">EXEWIN</a>
-<br/>
-<br/>
-</div>
-<center>
-<div class="mainBlock">
-<h2>Skills</h2>
 
-<div class="skill">
-<h3>Programming and Game Design</h3>
-<img src="iconz/unity.png"></img>
-<img src="iconz/csharp.png"></img>
-<br/>
-<br/>
-<div class="desc">
-I've learnt programming since 2010. My first language was C++ and I used it to make my first programs
-and text games. In 2013 I've discovered Unity. I've been using UnityScript, but I switched it to C#. 
-I've started many projects of different types (FPS, <a href="./projects.html#strategy">Strategy</a>, 
-<a href="./projects.html#rpg">RPG</a>, <a href="./projects.html#cg">Card-Game</a>, 
-<a href="./projects.html#sg">Spaceshooter</a>, Platformer) 
-and I've gained much experience about game design and mechanics.
-<br/>
-</div>
-</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <span class="navbar-brand">
+	  <button type="button" class="btn-clear" title="click ~ to toogle" onclick="showElement('console')"><script>document.write(label.toUpperCase());</script>:\><script>document.write(curDir);</script></button>
+	  </span>
+	  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li class="active"><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="other/other.html">Other</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<hr/>
+  <div class="container-fluid" id="console" style="display:none">
+  		<script>
+		document.write(label.toUpperCase()+":\u005C>"+curDir);
+		</script>
+		<input type="text" id="command" placeholder="type something..." onkeypress="checkKey()"></input>
+		<div id="output" style="display:block">
+		</div>
+  </div>
 
-<div class="skill">
-<h3>Webdev</h3>
-<img src="iconz/html.png"></img>
-<img src="iconz/css.png"></img>
-<img src="iconz/php.png"></img>
-<img src="iconz/js.png"></img>
-<img src="iconz/mysql.png"></img>
-<br/>
-<br/>
-<div class="desc">
-I know basics of making websites. Check out my <a href="http://github.com/exewin">Github</a>
-for my projects: #hardware-garage (PHP+MySQL), #random-memory-game (JavaScript+PHP) and
-<a href="./projects.html#tetris">#JavaScript-Tetris</a> (JavaScript)
-I've also made this page.
-<br/>
-</div>
+<div class="jumbotron" id="jumbotron">
+  <div class="container text-center">
+	<a href="index.html"><script>document.getElementById("jumbotron").style.backgroundColor = "#"+color;</script>exewin.github.io</a>
+	<p>Portfolio website of exewin</p>
+  </div>
 </div>
 
-<hr/>
 
-<div class="skill">
-<h3>Software</h3>
-<img src="iconz/audacity.png"></img>
-<img src="iconz/blender.png" width=50px></img>
-<img src="iconz/gimp.png"></img> 
-<br/>
-<br/>
-<div class="desc">
-When I create my projects I use <b>GIMP</b> for 2D graphics (I've 
-created all the graphics of the ships in my #space-game and all the 
-49 portraits of characters in #card-game). I'm also able to make simple 
-models and animations in <b>Blender</b> and edit some audio in <b>Audacity</b>.
-<br/>
-</div>
-<br/>
-</div>
-<br/>
+<div class="container-fluid bg-3 text-center">
 
-<a href="https://icons8.com" class="button">Icon pack by Icons8</a>
+	<h2>Skills</h2>
+	<br/>
 
-<br/>
-<a href="index.html" class="button">Main Menu</a>
-<br/>
-<br/>
+
+		<h3>Programming</h3>
+
+		<div class="row" data-row="1">
+		<div class="col-sm-2"></div>
+		  
+			<div class="col-sm-2 unityc paddingMe">
+			  <h1>C#</h1>
+			  <p>Main language</p>
+			</div>
+			
+			<div class="col-sm-6 text-left expand" id="col1" >
+			  <p>I've started using C# in 2016 due to deprecation process for UnityScript. 
+			  I know basics of that language very well plus some more advanced stuff.<br/>
+			  My best projects in C#: <a href="/projects/space-game/space-game.html">#space-game</a>, 
+			  <a href="/projects/card-game/card-game.html">#card-game</a>, 
+			  <a href="/projects/cubejong/cubejong.html">#mahjong3d</a>, 
+			  </p>
+			</div>
+			
+		<div class="col-sm-2"></div>
+		</div>
+		
+		<div class="row" data-row="2">
+		<div class="col-sm-2"></div>
+			
+			<div class="col-sm-6 colp" id="colP2"></div>
+			<div class="col-sm-6 text-left expand" id="col2">
+			  <p>C++ was my first try with programming.
+			  I know only basics - enough to make very simple games like <a href="https://github.com/exewin/Boapp-CPPSnake">snake</a>.</p>
+			</div>
+			
+			<div class="col-sm-2 cpp paddingMe">
+			  <h3>C++</h3>
+			  <p>Basics</p>
+			</div>
+			
+		<div class="col-sm-2"></div>
+		</div>
+		
+		<div class="row" data-row="3">
+		<div class="col-sm-2"></div>
+		  
+			<div class="col-sm-2 php paddingMe">
+			  <h2>PHP, SQL</h2>
+			  <p>Basics</p>
+			</div>
+			
+			<div class="col-sm-6 text-left expand" id="col3" >
+			  <p>PHP capabilities made webdev much more interesting for me. My biggest project in PHP/SQL: <a href="/projects/hg/hg.html">#hg</a></p>
+			</div>
+			
+		<div class="col-sm-2"></div>
+		</div>
+		
+		<div class="row" data-row="4">
+		<div class="col-sm-2"></div>
+			
+			<div class="col-sm-6 colp" id="colP4"></div>
+			<div class="col-sm-6 text-left expand" id="col4">
+			  <p>JS is a must for creating interactive sites, thus I had to learn it. I've also used it for some <a href="/projects/tetris/tetris.html">games</a></p>
+			</div>
+			
+			<div class="col-sm-2 js paddingMe">
+			  <h2><span class="wordwrap">Java Script</span></h2>
+			  <p>Basics</p>
+			</div>
+			
+		<div class="col-sm-2"></div>
+		</div>
+	
+	<hr/>
+	  
+	<h3>Software</h3>
+
+		<div class="row" data-row="5">
+		<div class="col-sm-2"></div>
+		  
+			<div class="col-sm-2 unity paddingMe">
+			  <h1>Unity</h1>
+			  <p>Main engine</p>
+			</div>
+			
+			<div class="col-sm-6 text-left expand" id="col5" >
+			  <p>I have been using Unity since its 3.x versions. Check <a href="/projects.html">projects</a> to see my work.</p>
+			</div>
+			
+		<div class="col-sm-2"></div>
+		</div>
+		
+		<div class="row" data-row="6">
+		<div class="col-sm-2"></div>
+			
+			<div class="col-sm-6 colp" id="colP6"></div>
+			<div class="col-sm-6 text-left expand" id="col6">
+			  <p>I've read part of the book about SFML and C++ and created some very simple games.</p>
+			</div>
+			
+			<div class="col-sm-2 sfml paddingMe">
+			  <h3>SFML</h3>
+			  <p>Basics</p>
+			</div>
+			
+		<div class="col-sm-2"></div>
+		</div>
+
+	<h3>Graphics</h3>
+	
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-2"></div>
+		  
+			<div class="col-sm-2">
+			  <h3>GIMP</h3>
+			  <p>simple pixel art</p>
+			</div>
+			
+			<div class="col-sm-2">
+			  <h3>Blender</h3>
+			  <p>simple, low-poly modeling</p>
+			</div>
+			
+		<div class="col-sm-2"></div>
+		<div class="col-sm-2"></div>
+		</div>
+		
+		<br/>
+		
+	<h4>Other</h4>
+	
+	<div class="row">
+	<div class="col-lg-5"></div>
+	<div class="col-lg-2 ">
+	<p>Knowledge about: </p>
+	<ul class="text-left">
+	<li>Game modding</li>
+	<li>Creating levels</li>
+	<li>Game design</li>
+	<li>Game mechanisms</li>
+	<ul>
+	</div>
+	<div class="col-lg-5"></div>
+	</div>
+	<br/>
+	<br/>
+	
+
 </div>
-<div class="footerBlock"> 
-<br/>
-Copyright © <script type="text/javascript">
+
+
+<footer class="container-fluid text-center">
+<p>Copyright © <script type="text/javascript">
 var d = new Date()
 if(d.getFullYear()!=2017)
 {
@@ -91,10 +234,8 @@ if(d.getFullYear()!=2017)
 }
 document.write(d.getFullYear())
 </script>
-Exewin ALL RIGHTS RESERVED
-<br/>
-<br/>
-</center>
+exewin ALL RIGHTS RESERVED</p>
+</footer>
 
 </body>
 </html>
