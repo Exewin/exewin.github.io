@@ -112,6 +112,73 @@ p strong{
 	color:white;
 }
 
+
+/*command style*/
+
+#console{
+	font-family:"Lucida Console", MS Sans Serif;
+	position:absolute;
+	color:#ccc;
+	font-size:75%;
+	margin:5px;
+	width:320px;
+	height:240px;
+	
+	
+	/*3D border*/
+	background-color:#D3CFC7;
+	border-right:3px solid #BFBFBF;
+	border-bottom:3px solid #BFBFBF;
+	border-top:3px solid #FEFEFE;
+	border-left:3px solid #FEFEFE;
+}
+
+#console input, #command, #output{
+	font-family:"Lucida Console", MS Sans Serif;
+	background-color:black;
+	color:#ccc;
+
+}
+
+.cmdbtn{
+	color:black;
+	padding-left:4px;
+	padding-right:4px;
+	display:block;
+	float:right;
+	margin:2px;
+	background-color:#D3CFC7;
+	border-right:1px solid #BFBFBF;
+	border-bottom:1px solid #BFBFBF;
+	border-top:1px solid #FEFEFE;
+	border-left:1px solid #FEFEFE;
+	cursor: pointer;
+}
+
+#titleBar{
+	padding-top:1px;
+	position:relative;
+	font-family:MS Sans Serif;
+	width:314px;
+	height:24px;
+	background-color: #05047E;
+	color:white;
+	margin:0px;
+	display:inline-block;
+	border-bottom:1px solid #BFBFBF;
+}
+
+#paddingBorder{
+	height:210px;
+	overflow-y: scroll;
+	width:314px;
+	background-color:black;
+	border-right:1px solid #FEFEFE;
+	border-bottom:1px solid #FEFEFE;
+	border-top:1px solid #BFBFBF;
+	border-left:1px solid #BFBFBF;
+}
+
 /*BOOTSTRAP EDITED*/
 /*BOOTSTRAP EDITED*/
 /*BOOTSTRAP EDITED*/

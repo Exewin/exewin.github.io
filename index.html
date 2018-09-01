@@ -52,12 +52,20 @@
   </div>
 </nav>
 
-  <div class="container-fluid" id="console" style="display:none">
-  		<script>
+  <div id="console" style="display:none">
+  		<div id='titleBar' onclick="foc()"><img src="/cmd.png"></img><script>document.write(label.toUpperCase());</script>:\WINNT\System\cmd.exe <div class="cmdbtn" onclick="showElement('console')">x</div> </div>
+		<div id="paddingBorder" onclick="foc()">
+		<script>
 		document.write(label.toUpperCase()+":\u005C>"+curDir);
 		</script>
-		<input type="text" id="command" placeholder="type something..." onkeypress="checkKey()"></input>
-		<div id="output" style="display:block">
+		<input type="text" id="command" onkeypress="checkKey()" onclick="foc()"></input>
+		<div id="output" style="display:block" onclick="foc()">
+		<script type="text/javascript">
+			document.getElementById('output').innerHTML = "exewinCMD 1.1 1998-2018 build 2<br/>";
+			document.getElementById('output').innerHTML += "Based on Microsoft Windows Command Prompt<br/>";
+			document.getElementById('output').innerHTML += "Toggle CMD faster with ~ key";
+		</script>
+		</div>
 		</div>
   </div>
 

@@ -1,3 +1,22 @@
+var label = "";
+label = getCookie("label");
+if(label.length!=1)
+{
+	label="C";
+}
+
+var color = "";
+color = getCookie("color");
+if(color.length!=6)
+{
+	color="dddddd";
+}
+
+function foc()
+{
+	document.getElementById('command').focus();
+}
+
 function showElement(ele)
 {
 	
@@ -5,6 +24,7 @@ function showElement(ele)
     if (x.style.display === "none") 
 	{
         x.style.display = "block";
+		document.getElementById('command').focus();
     } 
 	else 
 	{
@@ -25,6 +45,14 @@ document.addEventListener('keyup', function (event)
         showElement('console');
 		document.getElementById('command').focus();
     }
+	else if(event.keyCode == 38)
+	{
+		setCmd(true);
+	}
+	else if(event.keyCode == 40)
+	{
+		setCmd(false);
+	}
 });
 	
 
@@ -43,26 +71,35 @@ function checkKey()
 }
 
 
-var label = "";
-label = getCookie("label");
-if(label.length!=1)
+function setCmd(up)
 {
-	label="C";
+	if(lastUsed.length>0)
+	{
+		if(up)
+			curUsed--;
+		else
+			curUsed++;
+		
+		if(curUsed<0)
+			curUsed=lastUsed.length-1;
+		else if(curUsed>lastUsed.length-1)
+			curUsed=0;
+		
+		
+		document.getElementById('command').value = lastUsed[curUsed];
+	}
 }
 
-var color = "";
-color = getCookie("color");
-if(color.length!=6)
-{
-	color="dddddd";
-}
-
+var lastUsed=[];
+var curUsed;
 
 function CMD()
 {
 	//cd upgrade !
 	var cmd = document.getElementById('command').value;
 	document.getElementById('command').value = "";
+	lastUsed.push(cmd);
+	curUsed=lastUsed.length;
 	//cd commands
 	if(cmd.substring(0,2) == "cd")
 	{
@@ -115,7 +152,8 @@ function CMD()
 	//cmd
 	else if(cmd == "cmd")
 	{
-		document.getElementById('output').innerHTML = "exewinCMD 1.0 based on Microsoft Windows Command Prompt"
+		document.getElementById('output').innerHTML = "exewinCMD 1.1 1998-2018 build 2<br/>";
+		document.getElementById('output').innerHTML += "Based on Microsoft Windows Command Prompt";
 	}
 	//date
 	else if(cmd == "date")
@@ -144,8 +182,7 @@ function CMD()
 	//exit & shutdown
 	else if(cmd == "exit" || cmd == "shutdown")
 	{
-		close();
-		document.getElementById('output').innerHTML = "not allowed in modern browsers";
+		showElement('console');
 	}
 	//time
 	else if(cmd == "time")

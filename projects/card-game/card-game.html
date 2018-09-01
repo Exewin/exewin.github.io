@@ -12,7 +12,7 @@
 
 	<!-- bootstrap -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="js/jquery.js"></script> 
+	<script src="/js/jquery.js"></script> 
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/console.js"></script>
@@ -37,7 +37,7 @@
         <span class="icon-bar"></span>                        
       </button>
       <span class="navbar-brand">
-	  <button type="button" class="btn-clear" title="click ~ to toogle" onclick="showElement('console')"><script>document.write(label.toUpperCase());</script>:\><script>document.write(curDir);</script></button>
+	  <button type="button" class="btn-clear" title="click ~ to toogle" onclick="showElement('console')"><script>document.write(label.toUpperCase());</script>:\<script>document.write(curDir);</script></button>
 	  </span>
 	  
     </div>
@@ -53,12 +53,19 @@
   </div>
 </nav>
 
-  <div class="container-fluid" id="console" style="display:none">
-  		<script>
-		document.write(label.toUpperCase()+":\u005C>"+curDir);
+  <div id="console" style="display:none">
+  		<div id='titleBar' onclick="foc()"><img src="/cmd.png"></img><script>document.write(label.toUpperCase());</script>:\WINNT\System\cmd.exe <div class="cmdbtn" onclick="showElement('console')">x</div> </div>
+		<div id="paddingBorder" onclick="foc()">
+		<script>
+		document.write(label.toUpperCase()+":\u005C"+curDir+">");
 		</script>
-		<input type="text" id="command" placeholder="type something..." onkeypress="checkKey()"></input>
-		<div id="output" style="display:block">
+		<input type="text" id="command" onkeypress="checkKey()" onclick="foc()"></input>
+		<div id="output" style="display:block" onclick="foc()">
+		<script type="text/javascript">
+			document.getElementById('output').innerHTML = "exewinCMD 1.1 1998-2018 build 2<br/>";
+			document.getElementById('output').innerHTML += "Based on Microsoft Windows Command Prompt";
+		</script>
+		</div>
 		</div>
   </div>
 
